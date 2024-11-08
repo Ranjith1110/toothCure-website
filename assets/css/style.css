@@ -7,10 +7,11 @@
 body {}
 
 :root {
-    --primary: #06A3DA;
+    --bg-color: #E4EDEC;
     --secondary: #F57E57;
     --light: #EEF9FF;
     --main: #5bd3c7;
+    --main-hover: #ffbd59;
     --dark: #000;
 }
 
@@ -24,6 +25,7 @@ body {}
 h1,
 h2,
 .font-weight-bold {
+    font-size: 3.8rem !important;
     font-weight: 700 !important;
 }
 
@@ -101,6 +103,7 @@ h6,
     visibility: visible;
     opacity: 1;
 }
+
 /* Loading End */
 
 .back-to-top {
@@ -116,6 +119,16 @@ h6,
     color: var(--light) !important;
 }
 
+#banner {
+    /* padding: 80px 0; */
+}
+
+#who-we,
+#offer {
+    /* padding: 80px 0; */
+    /* background-color: var(--light); */
+}
+
 .navbar-light .navbar-nav .nav-link {
     padding: 35px 15px;
     font-size: 18px;
@@ -125,7 +138,7 @@ h6,
     transition: .5s;
 }
 
-.navbar-light div div:last-child a:last-child {
+.navbar-light div div div:last-child a:last-child {
     background-color: var(--main) !important;
     color: var(--light) !important;
     font-weight: 500;
@@ -137,19 +150,92 @@ h6,
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--main) !important;
-}
-
-.navbar-light div div:last-child a:last-child:hover{
-    background: var(--light) !important;
-    border-color: var(--dark) !important;
-    color: var(--main) !important;
+    color: var(--main-hover) !important;
 }
 
 @media (max-width: 991.98px) {
+
     .navbar-light .navbar-nav .nav-link,
     .sticky-top.navbar-light .navbar-nav .nav-link {
         padding: 10px 0;
     }
 }
 
+#bg-back {
+    position: relative;
+}
+
+#bg-back::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../images/banner/a23379956d634d4ecf0387a1d1d9ac82.jpeg) center / cover no-repeat;
+    opacity: 0.1;
+    /* Set opacity for the background image */
+    z-index: -1;
+    /* Keeps the image behind the content */
+}
+
+/* All Btn hover start */
+.navbar-light div div div:last-child a:last-child:hover,
+.banner-title a:hover {
+    border-radius: 30px;
+    transition: .5s;
+    background-color: var(--main-hover) !important;
+}
+
+/* All Btn hover end */
+
+/* Banner start */
+.banner-title {
+    padding-top: 5%;
+}
+
+.banner-title p {
+    font-size: 1.2rem;
+}
+
+.banner-title a {
+    background-color: var(--main) !important;
+    color: var(--light) !important;
+}
+
+/* Banner end */
+
+/* offer Swiper start */
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.offer-crd {
+    background: linear-gradient(to bottom, #5BD3C7, #B6FC9F);
+}
+
+/* offer Swiper end */

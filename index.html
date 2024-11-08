@@ -7,14 +7,22 @@
     <link rel="icon" type="image/png" href="assets/images/ToothCure.svg">
     <title>ToothCure</title>
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="./assets/lib/animate/animate.css">
+    <link rel="stylesheet" href="./assets/lib/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css">
+    <link rel="stylesheet" href="./assets/lib/twentytwenty/twentytwenty.css">
+
+    <!-- AOS Libraries -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Customized Bootstrap Stylesheet -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 
 </head>
@@ -36,57 +44,150 @@
     </div>
     <!-- Spinner End -->
 
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-        <a href="index.html" class="navbar-brand p-0">
-            <img class="" width="150px" src="./assets/images/Untitled design.png" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-0 gap-4">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Service</a>
-                <a href="contact.html" class="nav-item nav-link">Career</a>
+    <main id="bg-back">
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg navbar-light px-5 py-3 py-lg-0">
+            <div class="container">
+                <a href="index.html" class="navbar-brand p-0">
+                    <img class="" width="150px" src="./assets/images/Untitled design.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0 gap-4">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Service</a>
+                        <a href="contact.html" class="nav-item nav-link">Career</a>
+                    </div>
+                    <div>
+                        <a href="#" class="btn px-4 py-2 ms-4">Contact Us</a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <a href="#" class="btn py-2 px-4 ms-3">Contact Us</a>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar End -->
+        </nav>
+        <!-- Navbar End -->
 
-    <!-- Banner Start -->
-    <div class="container-fluid py-5">
+        <!-- Banner Start -->
+        <section id="banner">
+            <div class="container-fluid py-5">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-lg-7">
+                            <div class="banner-title text-center">
+                                <h1 class="">A <span style="color: #5bd3c7;">Dental Service</span> provider</h1>
+                                <p class="mb-4">Dental care includes daily hygiene and regular dental visits to maintain
+                                    oral health
+                                    and prevent issues.</p>
+                                <a href="appointment.html" class="btn px-4 py-3">Book an Appointment</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="rounded overflow-hidden">
+                                <img class="w-100 h-100 object-fit-cover" src="./assets/images/banner/Mask group.svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Banner End -->
+    </main>
+
+    <!-- Who We are Start -->
+    <section id="who-we">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-7">
-                    <div class="section-title mb-4">
-                        <h1 class="display-5 mb-0">A Dental Service provider</h1>
+                <div class="col-lg-6">
+                    <div class="rounded overflow-hidden">
+                        <img class="w-100 h-100 object-fit-cover" src="./assets/images/about/about 1.svg">
                     </div>
-                    
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
-                    
-                    <a href="appointment.html" class="btn btn-primary py-3 px-5 mt-4 wow zoomIn">Make Appointment</a>
                 </div>
-                <div class="col-lg-5" style="min-height: 500px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/about.jpg" style="object-fit: cover;">
+                <div class="col-lg-6">
+                    <div class="who-title">
+                        <h1 class="mt-5 mb-4">Who <span style="color: #5bd3c7;">we</span> are</h1>
+                        <p class="mb-4">"We’re a dental care provider supporting corporate clients, insurance
+                            brokers,
+                            and individual customers. Our services include personalized dental plans, broker support,
+                            and tailored care for everyone. Partner with us for quality dental solutions that keep every
+                            smile bright!"</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- About End -->
+        <!-- Who We are End -->
+
+    </section>
+    <!-- Who We are End -->
+
+    <!-- Offer Start -->
+    <section id="offer" class="pb-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Offer!!</h2>
+            <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" slides-per-view="3" space-between="30"
+            loop="true">
+                <swiper-slide class="offer-crd">
+                    <div class="text-center my-4">
+                        <img src="./assets/images/offer/Free consulting 1.png" alt="">
+                        <h4>Free Consulting</h4>
+                    </div>
+                </swiper-slide>
+
+                <swiper-slide class="offer-crd">
+                    <div class="text-center my-4">
+                        <img src="./assets/images/offer/Free consulting 1.png" alt="">
+                        <h4>Free Consulting</h4>
+                    </div>
+                </swiper-slide>
+
+                <swiper-slide class="offer-crd">
+                    <div class="text-center my-4">
+                        <img src="./assets/images/offer/Free consulting 1.png" alt="">
+                        <h4>Free Consulting</h4>
+                    </div>
+                </swiper-slide>
+
+                <swiper-slide class="offer-crd">
+                    <div class="text-center my-4">
+                        <img src="./assets/images/offer/Free consulting 1.png" alt="">
+                        <h4>Free Consulting</h4>
+                    </div>
+                </swiper-slide>
+            </swiper-container>
+        </div>
+    </section>
+    <!-- Offer End -->
+
+
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/lib/wow/wow.min.js"></script>
+    <script src="./assets/lib/easing/easing.min.js"></script>
+    <script src="./assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="./assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="./assets/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="./assets/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="./assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="./assets/lib/twentytwenty/jquery.event.move.js"></script>
+    <script src="./assets/lib/twentytwenty/jquery.twentytwenty.js"></script>
 
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- AOS Libraries -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <!-- Main Javascript -->
     <script src="./assets/js/script.js"></script>
