@@ -8,7 +8,7 @@
     <title>ToothCure</title>
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
@@ -44,56 +44,86 @@
     </div>
     <!-- Spinner End -->
 
-    <main id="bg-back">
-        <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg navbar-light px-5 py-3 py-lg-0">
-            <div class="container">
-                <a href="index.html" class="navbar-brand p-0">
-                    <img class="" width="150px" src="./assets/images/Untitled design.png" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0 gap-4">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="contact.html" class="nav-item nav-link">Career</a>
-                    </div>
-                    <div>
-                        <a href="#" class="btn px-4 py-2 ms-4">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <!-- Navbar End -->
+    <!-- Navbar -->
+    <nav data-aos="zoom-in-down" class="navbar navbar-expand-md navbar-ligh bg-light fixed-top">
+        <div class="container">
+            <!-- Logo/Brand -->
+            <a class="navbar-brand" href="#">
+                <img width="200px" src="./assets/images/Untitled design.png" alt="ToothCure Logo">
+            </a>
 
-        <!-- Banner Start -->
-        <section id="banner">
-            <div class="container-fluid py-5">
-                <div class="container">
-                    <div class="row g-5">
-                        <div class="col-lg-7">
-                            <div class="banner-title text-center">
-                                <h1 class="">A <span style="color: #5bd3c7;">Dental Service</span> provider</h1>
-                                <p class="mb-4">Dental care includes daily hygiene and regular dental visits to maintain
-                                    oral health
-                                    and prevent issues.</p>
-                                <a href="appointment.html" class="btn px-4 py-3">Book an Appointment</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="rounded overflow-hidden">
-                                <img class="w-100 h-100 object-fit-cover" src="./assets/images/banner/Mask group.svg">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Toggle button for mobile (hamburger icon) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Career</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-con-btn" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+     <!-- Social Media Icons -->
+     <div data-aos="fade-up-right" class="social-icons">
+        <a href="https://www.instagram.com" target="_blank" class="icon instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" class="icon linkedin">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="icon facebook">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="icon whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Banner -->
+    <section class="banner-bg">
+        <!-- Neural Nerve Background -->
+        <div class="neural-bg">
+            <svg class="neural-nerves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="none" stroke="#5bd3c7" stroke-width="4"
+                    d="M0,100 C150,200 300,0 450,150 C600,300 750,50 900,200 C1050,350 1200,100 1350,250" />
+                <path fill="none" stroke="#5bd3c7" stroke-width="2"
+                    d="M0,150 C100,100 200,200 300,100 C400,0 500,300 600,150 C700,0 800,250 900,50 C1000,-50 1100,300 1200,200 C1300,100 1400,50 1500,100" />
+            </svg>
+        </div>
+        <!-- Banner  -->
+        <section class="banner container text-center">
+            <h1 id="typing-text"></h1> <!-- H1 element for typing effect -->
+
+            <h3 data-aos="fade-up" data-aos-delay="600" class="my-3">
+                We exist to preserve your past and protect your future.
+            </h3>
+
+            <div data-aos="fade-right">
+                <a class="banner-btn" href="https://calendly.com/sabari-nizcare-mamce/new-meeting">Book an
+                    Appointment</a>
             </div>
         </section>
-        <!-- Banner End -->
-    </main>
+    </section>
+    <!-- Banner end -->
 
     <!-- Who We are Start -->
     <section id="who-we">
@@ -105,13 +135,17 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="who-title">
-                        <h1 class="mt-5 mb-4">Who <span style="color: #5bd3c7;">we</span> are</h1>
-                        <p class="mb-4">"We’re a dental care provider supporting corporate clients, insurance
-                            brokers,
-                            and individual customers. Our services include personalized dental plans, broker support,
-                            and tailored care for everyone. Partner with us for quality dental solutions that keep every
-                            smile bright!"</p>
+                    <div class="position-relative">
+                        <div class="who-title position-absolute">
+                            <h1 class="mb-4">Who <span style="color: #5bd3c7;">we</span> are</h1>
+                            <p class="mb-4">"We’re a dental care provider supporting corporate clients, insurance
+                                brokers,
+                                and individual customers. Our services include personalized dental plans, broker
+                                support,
+                                and tailored care for everyone. Partner with us for quality dental solutions that keep
+                                every
+                                smile bright!"</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -168,11 +202,11 @@
             <h2 class="text-center mb-5">Our services</h2>
             <div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 text-center">
                         <h3>Confidence begins with a bright, healthy smile.</h3>
                     </div>
                     <div class="col-md-6 text-center">
-                        <img src="./assets/images/offer/Our service.png" alt="">
+                        <img class="w-100" src="./assets/images/offer/Our service.png" alt="">
                     </div>
                 </div>
             </div>

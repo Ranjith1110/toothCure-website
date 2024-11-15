@@ -10,126 +10,80 @@
         }, 1);
     };
     spinner();
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
 
-
-    // Sticky Navbar
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 40) {
-            $('.navbar').addClass('sticky-top');
-        } else {
-            $('.navbar').removeClass('sticky-top');
-        }
-    });
-    
-    // Dropdown on mouse hover
-    const $dropdown = $(".dropdown");
-    const $dropdownToggle = $(".dropdown-toggle");
-    const $dropdownMenu = $(".dropdown-menu");
-    const showClass = "show";
-    
-    $(window).on("load resize", function() {
-        if (this.matchMedia("(min-width: 992px)").matches) {
-            $dropdown.hover(
-            function() {
-                const $this = $(this);
-                $this.addClass(showClass);
-                $this.find($dropdownToggle).attr("aria-expanded", "true");
-                $this.find($dropdownMenu).addClass(showClass);
-            },
-            function() {
-                const $this = $(this);
-                $this.removeClass(showClass);
-                $this.find($dropdownToggle).attr("aria-expanded", "false");
-                $this.find($dropdownMenu).removeClass(showClass);
-            }
-            );
-        } else {
-            $dropdown.off("mouseenter mouseleave");
-        }
-    });
-    
-    
-    // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-    });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
-
-
-    // Date and time picker
-    $('.date').datetimepicker({
-        format: 'L'
-    });
-    $('.time').datetimepicker({
-        format: 'LT'
-    });
-
-
-    // Image comparison
-    $(".twentytwenty-container").twentytwenty({});
-
-
-    // Price carousel
-    $(".price-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1500,
-        margin: 45,
-        dots: false,
-        loop: true,
-        nav : true,
-        navText : [
-            '<i class="bi bi-arrow-left"></i>',
-            '<i class="bi bi-arrow-right"></i>'
-        ],
-        responsive: {
-            0:{
-                items:1
-            },
-            768:{
-                items:2
-            }
-        }
-    });
-
-
-    // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        center: true,
-        dots: false,
-        loop: true,
-        nav : true,
-        navText : [
-            '<i class="bi bi-chevron-left"></i>',
-            '<i class="bi bi-chevron-right"></i>'
-        ],
-        responsive: {
-            0:{
-                items:1
-            },
-            576:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:3
-            }
-        }
-    });
-    
 })(jQuery);
+
+// Texts with color changes for specific words
+const texts = [
+    [
+        { text: "A ", class: "" }, // Normal text
+        { text: "Dental Service ", class: "text-blue" }, // Highlighted word in blue
+        { text: "Provider! ", class: "" } // Normal punctuation
+    ]
+];
+
+let textIndex = 0;  // Which line we're typing
+let wordIndex = 0;  // Which word in the line we're typing
+let charIndex = 0;  // Which character in the current word
+const typingSpeed = 150;  // Speed of typing
+
+function typeEffect() {
+    const typingTextElement = document.getElementById("typing-text");
+
+    // Get the current line and word
+    const currentLine = texts[textIndex];
+    const currentWordObj = currentLine[wordIndex];
+    const currentWord = currentWordObj.text;
+
+    // Create a span for the word if it doesn't exist yet
+    let currentSpan = typingTextElement.querySelectorAll('span')[wordIndex];
+    if (!currentSpan) {
+        currentSpan = document.createElement('span');
+        currentSpan.className = currentWordObj.class;
+        typingTextElement.appendChild(currentSpan);
+    }
+
+    // Type each character of the current word
+    if (charIndex < currentWord.length) {
+        currentSpan.innerHTML += currentWord.charAt(charIndex); // Append the next character
+        charIndex++;
+        setTimeout(typeEffect, typingSpeed); // Continue typing
+    } else {
+        // Move to the next word if available
+        wordIndex++;
+        if (wordIndex < currentLine.length) {
+            charIndex = 0; // Reset the character index for the next word
+            setTimeout(typeEffect, typingSpeed); // Continue typing the next word
+        } else {
+            // Move to the next line if available
+            textIndex++;
+            if (textIndex < texts.length) {
+                wordIndex = 0; // Reset word index for the next line
+                charIndex = 0; // Reset character index for the next line
+                // Add a line break before the next line
+                const lineBreak = document.createElement('br');
+                typingTextElement.appendChild(lineBreak);
+                setTimeout(typeEffect, 1000); // Pause for 1 second before typing the next line
+            } else {
+                // After all lines are typed, remove the cursor
+                typingTextElement.style.borderRight = "none"; // Stop cursor when done typing
+            }
+        }
+    }
+
+    // Add blinking cursor effect only to the current line
+    typingTextElement.classList.remove('blinking-cursor');
+    if (wordIndex < currentLine.length) {
+        typingTextElement.classList.add('blinking-cursor');
+    }
+}
+
+// Start the typing effect when the page loads
+window.onload = function () {
+    typeEffect();
+};
 
