@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 0.3s ease !important;
 }
 
 /* body {} */
@@ -25,19 +26,19 @@
 h1,
 h2,
 .font-weight-bold {
-    font-weight: 700 !important;
+    font-weight: 700;
 }
 
 h3,
 h4,
 .font-weight-semi-bold {
-    font-weight: 600 !important;
+    font-weight: 600;
 }
 
 h5,
 h6,
 .font-weight-medium {
-    font-weight: 500 !important;
+    font-weight: 500;
 }
 
 /* Heading Tags End */
@@ -114,7 +115,7 @@ h6,
     z-index: 99;
 }
 
-.bi-arrow-up {
+.fa-arrow-up {
     color: var(--light) !important;
 }
 
@@ -129,7 +130,7 @@ h6,
     background-color: var(--light);
 }
 
-.title{
+.title {
     font-size: 5rem;
 }
 
@@ -151,64 +152,61 @@ h6,
     border-color: white;
 }
 
-.nav-con-btn{
-    background-color: var(--main);
+.nav-con {
+    background-color: var(--main) !important;
     color: var(--light) !important;
-    transition: 0.3s ease !important;
+    transition: 0.3s ease;
 }
 
-.nav-con-btn:hover{
+.nav-con:hover {
     border-radius: 30px;
 }
 
 .navbar-toggler-icon {
-    color: var(--dark) !important; 
+    color: var(--dark);
 }
 
-@media (max-width: 991.98px) {
-
-    
-}
+@media (max-width: 991.98px) {}
 
 .social-icons {
-    position: fixed; /* Fixes the position to the viewport */
-    bottom: 20px; /* Adjusts vertical position */
-    left: 20px; /* Adjusts horizontal position */
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
     display: flex;
-    flex-direction: column; /* Aligns icons vertically */
-    gap: 10px; /* Space between icons */
-    z-index: 1000; /* Ensures icons are above other elements */
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
 }
 
 .icon {
-    font-size: 28px; /* Size of the icons */
-    color: white; 
-    text-decoration: none; /* Removes underline */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Animation for transform and opacity */
+    font-size: 28px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .instagram {
-    color: #C13584; /* Instagram color */
+    color: #C13584;
 }
 
 .instagram:hover {
-    color: #C13584; /* Instagram color */
+    color: #C13584;
 }
 
 .linkedin {
-    color: #0077B5; /* LinkedIn color */
+    color: #0077B5;
 }
 
 .linkedin:hover {
-    color: #0077B5; /* LinkedIn color */
+    color: #0077B5;
 }
 
 .facebook {
-    color: #1877F2; /* Facebook color */
+    color: #1877F2;
 }
 
 .facebook:hover {
-    color: #1877F2; /* Facebook color */
+    color: #1877F2;
 }
 
 .whatsapp {
@@ -221,36 +219,36 @@ h6,
 
 /* Hover Effects */
 .icon:hover {
-    transform: scale(1.1); /* Slightly enlarge the icon */
+    transform: scale(1.1);
 }
 
 .banner-bg {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Prevent overflow */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
 #typing-text {
-    font-size: 6vw; 
-    line-height: 1.2; 
-    white-space: normal; 
+    font-size: 6vw;
+    line-height: 1.2;
+    white-space: normal;
     overflow: hidden;
-    border-right: 2px solid var(--main); 
+    border-right: 2px solid var(--main);
     display: inline-block;
 }
 
 .text-blue {
-    color: var(--main) !important;
+    color: var(--main);
 }
 
 .blinking-cursor {
-    animation: blink 0.7s step-start infinite; /* Cursor blink effect */
+    animation: blink 0.7s step-start infinite;
 }
 
 .banner div {
-    padding-top:40px ;
+    padding-top: 40px;
 }
 
 .banner-btn {
@@ -260,7 +258,7 @@ h6,
     color: var(--light);
     background-color: var(--main);
     padding: 15px;
-    transition: 0.3s ease; 
+    transition: 0.3s ease;
 }
 
 .banner-btn:hover {
@@ -277,23 +275,25 @@ h6,
     height: 100%;
     z-index: -1;
     overflow: hidden;
-    opacity: 0.3; /* Adjust for subtle effect */
+    opacity: 0.3;
+    /* Adjust for subtle effect */
 }
 
 .neural-nerves {
     position: absolute;
     width: 100%;
     height: 100%;
-    transform: translateY(0); /* Start position */
-    animation: moveNerves .9s linear infinite alternate; /* Alternates between up and down */
+    transform: translateY(0);
+    animation: moveNerves .9s linear infinite alternate;
 }
 
 @keyframes moveNerves {
     0% {
         transform: translateY(0);
     }
+
     100% {
-        transform: translateY(-20px); 
+        transform: translateY(-20px);
     }
 }
 
@@ -312,10 +312,10 @@ h6,
 }
 
 .offer-para {
-    position: absolute; /* Ensure the element is positioned relative to its nearest positioned ancestor */
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Move the element by 50% of its own width and height */
+    transform: translate(-50%, -50%);
 }
 
 .offer-para h5 {
