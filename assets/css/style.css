@@ -240,7 +240,7 @@ h6,
 }
 
 #typing-text {
-    font-size: 6vw;
+    font-size: 6rem;
     line-height: 1.2;
     white-space: normal;
     overflow: hidden;
@@ -262,7 +262,7 @@ h6,
 }
 
 .banner h3 {
-    font-size: 2vw;
+    font-size: 2rem;
 }
 
 .text-blue {
@@ -301,8 +301,8 @@ h6,
     height: 100%;
     z-index: -1;
     overflow: hidden;
-    opacity: 0.3;
-    /* Adjust for subtle effect */
+    opacity: 0.5;
+    object-fit: cover;
 }
 
 .neural-nerves {
@@ -323,7 +323,25 @@ h6,
     }
 }
 
-@media (max-width: 991.98px) {}
+@media (max-width: 991.98px) {
+    #typing-text {
+        font-size: 5.5rem;
+    }
+
+    .banner h3 {
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #typing-text {
+        font-size: 5rem;
+    }
+
+    .banner h3 {
+        font-size: 1.6rem;
+    }
+}
 
 /* Banner end */
 
