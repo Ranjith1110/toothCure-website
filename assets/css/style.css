@@ -333,7 +333,23 @@ h6,
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
+
+    #banner,
+    #offer {
+        padding: 60px 0;
+    }
+
+    #who-we,
+    #service {
+        padding: 60px 0;
+        background-color: var(--light);
+    }
+
+    .title {
+        font-size: 4rem;
+    }
+
     #typing-text {
         font-size: 5rem;
     }
@@ -343,6 +359,7 @@ h6,
     }
 
     .social-icons {
+        position: absolute;
         display: flex;
         flex-direction: row;
         gap: 20px;
@@ -361,9 +378,7 @@ h6,
 
 /* Banner end */
 
-.who-title {
-    top: 35%;
-}
+.who-title {}
 
 /* offer start */
 
@@ -383,7 +398,6 @@ h6,
 .offer-para h5 {
     font-size: 1.3rem;
 }
-
 
 @media (max-width: 991.98px) {
 
