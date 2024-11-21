@@ -390,7 +390,20 @@ h6,
 
 /* Banner end */
 
-.who-title {}
+.who-title {
+    margin-top: 30%;
+}
+
+@media (max-width: 991.98px) {
+    .who-title {
+        margin-top: 0%;
+        text-align: center;
+    }
+}
+
+.g-5 {
+    padding: 0;
+}
 
 /* offer start */
 
