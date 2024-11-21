@@ -22,6 +22,10 @@
     font-display: swap;
 }
 
+a{
+    text-decoration: none;
+}
+
 /* Heading Tags */
 h1,
 h2,
@@ -125,7 +129,8 @@ h6,
 }
 
 #who-we,
-#service {
+#service,
+#offers {
     padding: 100px 0;
     background-color: var(--light);
 }
@@ -166,6 +171,14 @@ h6,
 
 .navbar-toggler-icon {
     color: var(--dark);
+}
+
+@media (max-width: 991.98px) {
+
+    .navbar-light .navbar-nav .nav-link,
+    .sticky-top.navbar-light .navbar-nav .nav-link {
+        padding: 10px 0;
+    }
 }
 
 /* Navbar End */
@@ -274,7 +287,7 @@ h6,
 }
 
 .banner div {
-    padding-top: 40px;
+    margin-top: 30px;
 }
 
 .banner-btn {
@@ -352,10 +365,12 @@ h6,
 
     #typing-text {
         font-size: 5rem;
+        margin: 0;
     }
 
     .banner h3 {
         font-size: 1.6rem;
+        margin: 0;
     }
 
     .social-icons {
@@ -371,20 +386,11 @@ h6,
 
 @media (max-width: 500px) {
     #typing-text {
-        font-size: 4rem;
-    }
-
-    .banner h1 {
-        text-align: start;
+        font-size: 3.5rem;
     }
 
     .banner h3 {
-        font-size: 1.2rem;
-        text-align: start;
-    }
-
-    .banner div {
-        text-align: start
+        font-size: 1.1rem;
     }
 }
 
@@ -401,10 +407,6 @@ h6,
     }
 }
 
-.g-5 {
-    padding: 0;
-}
-
 /* offer start */
 
 .offer-crd {
@@ -413,23 +415,48 @@ h6,
     height: 100%;
 }
 
+.cat-item div {
+    background: #FFFFFF;
+    border: 1px dashed  rgba(91, 211, 199,.3);
+    transition: .5s;
+}
+
+.cat-item div h6 {
+    font-size: 1.3rem;
+    color: var(--dark);
+}
+
 .offer-para {
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.offer-para h5 {
-    font-size: 1.3rem;
+.offer-img {
+    max-width: 1000px;
+    margin: 0 auto; /* Center the image in its container */
 }
 
-@media (max-width: 991.98px) {
+.offer-para {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* width: 100%; */
+}
 
-    .navbar-light .navbar-nav .nav-link,
-    .sticky-top.navbar-light .navbar-nav .nav-link {
-        padding: 10px 0;
+.offer-img img {
+    width: 100%;
+    max-width: 1000px;
+    opacity: 0.3;
+}
+
+@media (max-width: 768px) {
+    .offer-para {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .offer-img img {
+        max-width: 250px;
     }
 }
-
-/* offer Swiper end */
