@@ -343,6 +343,16 @@ h6,
     }
 }
 
+@media (max-width: 500px) {
+    #typing-text {
+        font-size: 4rem;
+    }
+
+    .banner h3 {
+        font-size: 1.2rem;
+    }
+}
+
 /* Banner end */
 
 .who-title {
