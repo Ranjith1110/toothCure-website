@@ -2,75 +2,102 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <title>Responsive Swiper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: calc(100% - 40px); /* Space for pagination */
+      margin-bottom: 40px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-pagination {
+      position: relative;
+      margin-top: 10px;
+    }
+  </style>
 </head>
-
-<style>
-    #typing-text::after {
-        content: "|";
-        display: inline-block;
-        margin-left: 5px;
-        animation: blink 0.6s step-start infinite;
-    }
-
-    @keyframes blink {
-        50% {
-            opacity: 0;
-        }
-    }
-</style>
 
 <body>
 
-    <h1 id="typing-text"></h1>
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://via.placeholder.com/300x200" alt="Slide 1"></div>
+      <div class="swiper-slide"><img src="https://via.placeholder.com/300x200" alt="Slide 2"></div>
+      <div class="swiper-slide"><img src="https://via.placeholder.com/300x200" alt="Slide 3"></div>
+      <div class="swiper-slide"><img src="https://via.placeholder.com/300x200" alt="Slide 4"></div>
+      <div class="swiper-slide"><img src="https://via.placeholder.com/300x200" alt="Slide 5"></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const textElement = document.getElementById("typing-text");
-            const typingSpeed = 100; // Speed in milliseconds per character
-
-            // Split the text into parts
-            const textParts = [
-                { text: "A ", color: "inherit" },
-                { text: "Dental Service", color: "#2ee0b6" }, // Change the color here
-                { text: " Provider!", color: "inherit" },
-            ];
-
-            let currentPartIndex = 0;
-            let charIndex = 0;
-
-            function typeText() {
-                if (currentPartIndex < textParts.length) {
-                    const { text, color } = textParts[currentPartIndex];
-                    if (charIndex < text.length) {
-                        // Create a span for the current part
-                        if (!textElement.lastChild || textElement.lastChild.nodeType !== 1) {
-                            const span = document.createElement("span");
-                            span.style.color = color;
-                            textElement.appendChild(span);
-                        }
-
-                        // Add the next character
-                        textElement.lastChild.textContent += text.charAt(charIndex);
-                        charIndex++;
-                        setTimeout(typeText, typingSpeed);
-                    } else {
-                        // Move to the next part
-                        currentPartIndex++;
-                        charIndex = 0;
-                        setTimeout(typeText, typingSpeed);
-                    }
-                }
-            }
-
-            // Start the typing animation
-            typeText();
-        });
-
-    </script>
+  <!-- Initialize Swiper -->
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+    });
+  </script>
 
 </body>
 

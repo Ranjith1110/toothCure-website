@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const textElement = document.getElementById("typing-text");
-    const typingSpeed = 100; // Speed in milliseconds per character
+    const typingSpeed = 100;
 
-    // Define text parts with color
     const textParts = [
         { text: "A ", color: "inherit" },
-        { text: "Dental Service", color: "#5bd3c7" }, // Highlight color
+        { text: "Dental Service", color: "#5bd3c7" },
         { text: " Provider!", color: "inherit" },
     ];
 
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentPartIndex < textParts.length) {
             const { text, color } = textParts[currentPartIndex];
 
-            // Create a span for the current part if it doesn't exist
             let span = textElement.querySelector(`span[data-part="${currentPartIndex}"]`);
             if (!span) {
                 span = document.createElement("span");
@@ -25,15 +23,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 span.style.color = color;
                 textElement.appendChild(span);
             }
-
-            // Add the next character
+            
             span.textContent += text.charAt(charIndex);
             charIndex++;
 
             if (charIndex < text.length) {
                 setTimeout(typeText, typingSpeed);
             } else {
-                // Move to the next part
                 charIndex = 0;
                 currentPartIndex++;
                 setTimeout(typeText, typingSpeed);
@@ -41,8 +37,40 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Start the typing animation
     typeText();
 
-    
 });
+
+
+(function ($) {
+    "use strict";
+
+    $(".service-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1000,
+        margin: 25,
+        loop: true,
+        center: true,
+        dots: false,
+        nav: true,
+        navText: [
+            '<i class="bi bi-chevron-left"></i>',
+            '<i class="bi bi-chevron-right"></i>'
+        ],
+        responsive: {
+            0: {
+                items: 1
+            },
+            576: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            992: {
+                items: 3
+            }
+        }
+    });
+
+})(jQuery);
