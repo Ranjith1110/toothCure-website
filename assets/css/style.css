@@ -383,12 +383,6 @@ h6,
 
 /* offer start */
 
-.offer-crd {
-    background: linear-gradient(to bottom, #5BD3C7, #B6FC9F);
-    width: 100%;
-    height: 100%;
-}
-
 .cat-item div {
     background: #FFFFFF;
     border: 1px dashed  rgba(91, 211, 199,.3);
@@ -415,7 +409,7 @@ h6,
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* width: 100%; */
+    width: 100%;
 }
 
 .offer-img img {
