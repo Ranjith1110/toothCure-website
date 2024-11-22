@@ -136,7 +136,7 @@ h6,
 }
 
 .title {
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 /* Navbar Start */
@@ -334,7 +334,7 @@ h6,
     }
 
     .title {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     #typing-text {
@@ -391,7 +391,7 @@ h6,
 
 .cat-item div h6 {
     font-size: 1.5rem;
-    color: var(--main);
+    color: var(--dark);
     font-weight: 600;
 }
 
