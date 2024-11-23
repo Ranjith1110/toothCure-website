@@ -188,7 +188,7 @@ h6,
 /* Social Icons Start */
 
 .social-icons {
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     left: 20px;
     display: flex;
