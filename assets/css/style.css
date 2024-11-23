@@ -404,7 +404,6 @@ h6,
 .offer-img {
     max-width: 1000px;
     margin: 0 auto;
-    /* Center the image in its container */
 }
 
 .offer-para {
@@ -431,39 +430,6 @@ h6,
     }
 }
 
-/* Swiper Start */
-
-html,
-body {
-    position: relative;
-    height: 100%;
-}
-
-swiper-container {
-    width: 100%;
-    height: 100%;
-}
-
-swiper-slide {
-    text-align: center;
-    font-size: 22px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-swiper-slide img {
-    display: block;
-    width: 100%;
-    /* height: 100%; */
-    object-fit: cover;
-}
-
-/* Swiper End */
-
-
-
 /* Service Start */
 .service-item {
     position: relative;
@@ -472,30 +438,17 @@ swiper-slide img {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .05);
 }
 
-.service-item .service-overlay {
+.service-carousel .owl-nav .owl-next {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+    top: 100px;
+    right: -4%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, .5);
-    opacity: 0;
-    padding-top: 60px;
-    transition: .5s;
 }
 
-.service-item:hover .service-overlay {
-    opacity: 1;
-    padding-top: 0;
-}
-
-.service-carousel .owl-nav {
+.service-carousel .owl-nav .owl-prev {
     position: absolute;
-    top: -100px;
-    right: 0;
+    top: 100px;
+    left: -5%;
     display: flex;
 }
 
@@ -507,8 +460,9 @@ swiper-slide img {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--main);
+    color: var(--light);
     border-radius: 55px;
+    background-color: var(--main);
     box-shadow: 0 0 45px rgba(0, 0, 0, .1);
     font-size: 25px;
     transition: .5s;
@@ -516,17 +470,14 @@ swiper-slide img {
 
 .service-carousel .owl-nav .owl-prev:hover,
 .service-carousel .owl-nav .owl-next:hover {
-    background: var(--main);
-    color: var(--light);
+    background: var(--light);
+    color: var(--main);
 }
 
 @media (max-width: 768px) {
 
     .service-carousel .owl-nav {
-        top: -40px;
-        right: auto;
-        left: 50%;
-        transform: translateX(-50%);
+        display: none;
     }
 
     .service-carousel .owl-nav .owl-prev,

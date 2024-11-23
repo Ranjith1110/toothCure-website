@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     $(".service-carousel").owlCarousel({
         autoplay: true,
-        smartSpeed: 1000,
+        smartSpeed: 500,
         margin: 25,
         loop: true,
         center: true,
