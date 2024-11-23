@@ -489,3 +489,18 @@ h6,
     }
 }
 /* Service End */
+
+/* Footer Start */
+
+footer div {
+    background-color: var();
+}
+
+.social-foot a {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 6px 8px;
+    border-radius: 4px;
+}
+
+/* Footer End */
