@@ -359,8 +359,13 @@ h6,
 }
 
 @media (max-width: 500px) {
+
+    .banner {
+        height: 50vh;
+    }
+
     #typing-text {
-        font-size: 3.5rem;
+        font-size: 3.2rem;
     }
 
     .banner h3 {
