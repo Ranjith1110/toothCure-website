@@ -417,7 +417,15 @@ h6,
 .cat-item div h6 {
     font-size: 1.5rem;
     color: var(--dark);
-    font-weight: 600;
+    font-weight: 700;
+}
+
+.cat-item div span {
+    color: var(--dark);
+    font-size: 3rem;
+    font-weight: 800;
+    /* background-color: var(--main); */
+    
 }
 
 .offer-para {
