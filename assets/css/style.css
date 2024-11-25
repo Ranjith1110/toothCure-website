@@ -365,11 +365,19 @@ h6,
     }
 
     #typing-text {
-        font-size: 3.2rem;
+        font-size: 3rem;
     }
 
     .banner h3 {
-        font-size: 1.1rem;
+        font-size: 16px;
+    }
+
+    .banner-btn {
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 12px;
+        transition: 0.3s ease;
     }
 }
 
