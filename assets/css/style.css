@@ -586,10 +586,6 @@ footer div {
 
 /* Form Starrt */
 
-.container {
-    margin-top: 50px;
-}
-
 form {
     display: flex;
     flex-direction: column;
