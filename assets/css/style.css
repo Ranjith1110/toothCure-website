@@ -130,7 +130,8 @@ h6,
 }
 
 #who-we,
-#service {
+#service,
+#book-appoint {
     padding: 100px 0;
     background-color: var(--light);
 }
@@ -583,3 +584,46 @@ footer div {
     }
 }
 
+/* Form Starrt */
+
+.container {
+    margin-top: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    /* width: 300px; */
+    margin: 50px auto;
+}
+
+form label, form input {
+    margin: 5px 0;
+}
+
+form label span{
+    color: #ff0000;
+}
+
+form input {
+    padding: 10px 16px;
+    outline: none;
+    border: 1px solid var(--main);
+}
+
+.book-btn button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    color: var(--light);
+    background-color: var(--main);
+    padding: 6px 14px;
+    transition: 0.3s ease;
+}
+
+.book-btn button:hover {
+    border-radius: 30px;
+}
+
+/* Form End */
