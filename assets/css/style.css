@@ -248,7 +248,8 @@ h6,
 
 /* Banner Start */
 
-.banner-bg {
+.banner-bg,
+#page-header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -538,3 +539,47 @@ footer div {
 }
 
 /* Footer End */
+
+/* Appointment Page */
+
+.banner-book{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+    overflow: hidden;
+}
+
+.banner-book section {
+    margin-bottom: 10%;
+}
+
+#typing-book {
+    font-size: 6rem;
+    line-height: 1.2;
+    white-space: normal;
+    overflow: hidden;
+    display: inline-block;
+}
+
+@media (max-width: 991.98px) {
+    #typing-book {
+        font-size: 5.5rem;
+    }
+}
+
+@media (max-width: 769px) {
+
+    #typing-book {
+        font-size: 5rem;
+        margin: 0;
+    }
+}
+
+@media (max-width: 500px) {
+
+    #typing-book {
+        font-size: 2.8rem;
+    }
+}
+

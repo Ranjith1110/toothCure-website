@@ -1,3 +1,5 @@
+// Index Page End
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const textElement = document.getElementById("typing-text");
@@ -38,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     typeText();
+
 
      // Function to animate a counter
      const animateCounter = (element, targetValue, duration) => {
@@ -86,6 +89,55 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+// Index Page End
+
+// Appointment Page Start
+
+const textElementBook = document.getElementById("typing-book");
+const typingSpeedBook = 100;
+
+const textPartsBook = [
+    { text: "Book", color: "inherit" },
+    { text: " an", color: "#5bd3c7" },
+    { text: " Appointment!", color: "inherit" },
+];
+
+let currentPartIndexBook = 0;
+let charIndexBook = 0;
+
+function typeTextBook() {
+    if (currentPartIndexBook < textPartsBook.length) {
+        const { text, color } = textPartsBook[currentPartIndexBook];
+
+        // Use the correct textElementBook variable
+        let span = textElementBook.querySelector(`span[data-part="${currentPartIndexBook}"]`);
+        if (!span) {
+            span = document.createElement("span");
+            span.setAttribute("data-part", currentPartIndexBook);
+            span.style.color = color;
+            textElementBook.appendChild(span);
+        }
+
+        span.textContent += text.charAt(charIndexBook);
+        charIndexBook++;
+
+        if (charIndexBook < text.length) {
+            setTimeout(typeTextBook, typingSpeedBook); // Use the correct typingSpeedBook
+        } else {
+            charIndexBook = 0;
+            currentPartIndexBook++;
+            setTimeout(typeTextBook, typingSpeedBook); // Use the correct typingSpeedBook
+        }
+    }
+}
+
+// Start the typing effect
+typeTextBook();
+
+// Appointment Page End
+
+// jQuery Start
+
 (function ($) {
     "use strict";
 
@@ -118,3 +170,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 })(jQuery);
+
+// jQuery End
