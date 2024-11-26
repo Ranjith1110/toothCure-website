@@ -126,8 +126,7 @@ h6,
 }
 
 #banner,
-#offer,
-#network {
+#offer {
     padding: 50px 0;
 }
 
@@ -137,8 +136,9 @@ h6,
     /* background-color: var(--light); */
 }
 
-#service{
-    padding: 100px 0;
+#service,
+#network{
+    padding: 80px 0;
 }
 
 .title {
@@ -481,7 +481,7 @@ h6,
     position: relative;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, .05);
+    box-shadow: 0px 15px 5px rgba(0, 0, 0, .08);
 }
 
 .service-carousel .owl-nav .owl-next {
