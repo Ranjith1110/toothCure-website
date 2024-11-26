@@ -408,6 +408,12 @@ h6,
     }
 }
 
+@media (max-width: 500px) {
+    .who-title {
+        padding: 15px;
+    }
+}
+
 /* offer start */
 
 .cat-item div {
