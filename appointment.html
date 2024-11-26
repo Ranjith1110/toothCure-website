@@ -100,45 +100,54 @@
                 </div>
                 <div class="col-lg-6 py-3">
                     <div class="ticket-form p-4 mt-5">
-                        <h2 class="text-dark text-uppercase text-center">book now!</h2>
+                        <h2 class="text-dark text-uppercase text-center">Book Now!</h2>
                         <form>
-                            <div class="row g-4">
+                            <div class="row">
                                 <div class="col-12">
-                                    <input type="text" class="form-control py-2" id="name" placeholder="Your Name">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control py-2" id="name" placeholder="Enter your name">
                                 </div>
                                 <div class="col-12 col-xl-6">
-                                    <input type="email" class="form-control py-2" id="email" placeholder="Your Email">
+                                    <label for="email" class="form-label">Your Email</label>
+                                    <input type="email" class="form-control py-2" id="email" placeholder="Enter your email">
                                 </div>
                                 <div class="col-12 col-xl-6">
-                                    <input type="phone" class="form-control py-2" id="phone" placeholder="Phone">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <input type="tel" class="form-control py-2" id="phone" placeholder="Enter your phone number">
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" class="form-control py-2" id="number" placeholder="State">
+                                    <label for="state" class="form-label">State</label>
+                                    <input type="text" class="form-control py-2" id="state" placeholder="Enter your state">
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" class="form-control py-2" id="number" placeholder="City">
+                                    <label for="city" class="form-label">City</label>
+                                    <input type="text" class="form-control py-2" id="city" placeholder="Enter your city">
                                 </div>
                                 <div class="col-12">
-                                    <select class="form-select py-2" aria-label="Default select example">
-                                        <option selected>Lab Name</option>
+                                    <label for="lab-name" class="form-label">Lab Name</label>
+                                    <select class="form-select py-2" id="lab-name" aria-label="Lab Name">
+                                        <option selected>Select a package</option>
                                         <option value="1">Family Packages</option>
                                         <option value="2">Basic Packages</option>
                                         <option value="3">Premium Packages</option>
                                     </select>
                                 </div>
                                 <div class="col-12 col-xl-6">
-                                    <input type="date" class="form-control py-2" id="number" placeholder="date">
+                                    <label for="date" class="form-label">Date</label>
+                                    <input type="date" class="form-control py-2" id="date" placeholder="Choose a date">
                                 </div>
                                 <div class="col-12 col-xl-6">
-                                    <input class="form-control py-2" type="time">
+                                    <label for="time" class="form-label">Time</label>
+                                    <input class="form-control py-2" type="time" id="time" placeholder="Choose a time">
                                 </div>
-                                <div class="col-12 text-center">
-                                    <button type="button" class="btn btn-primary w-25">Submint</button>
+                                <div class="col-12 text-center mt-4">
+                                    <button type="button" class="btn btn-primary w-50">Submit</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
