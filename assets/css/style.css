@@ -395,9 +395,7 @@ h6,
 
 /* Banner end */
 
-.who-title {
-    /* margin-top: 5%; */
-}
+.who-title {}
 
 @media (max-width: 991.98px) {
     .who-title {
@@ -551,7 +549,7 @@ footer div {
     background-color: var(--light);
 }
 
-.banner-book{
+.banner-book {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -601,14 +599,14 @@ footer div {
 
 /* Form Starrt */
 
-form label, form input {
+form label,
+form input {
     margin: 2px 0;
 }
 
 .ticket-form {
-    background:  rgba(91, 211, 199, 0.2);
+    background: rgba(91, 211, 199, 0.2);
     border-radius: 10px;
 }
 
 /* Form End */
-
