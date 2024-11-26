@@ -23,7 +23,7 @@
 
 </head>
 
-<body>
+<body class="bg-body">
 
     <!-- Spinner Start -->
     <div id="spinner"
@@ -64,7 +64,7 @@
                         <a class="nav-link" href="#">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#service">Service</a>
+                        <a class="nav-link" href="index.html">Service</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Career</a>
@@ -78,150 +78,71 @@
     </nav>
     <!-- Navbar end -->
 
-    <!-- Social Media Icons Start -->
-    <div class="social-icons">
-        <a href="https://www.instagram.com/tooth.cure" target="_blank" class="icon instagram">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/toothcure/about/?viewAsMember=true" target="_blank"
-            class="icon linkedin">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <!-- <a href="https://www.facebook.com" target="_blank" class="icon facebook">
-            <i class="fa-brands fa-facebook"></i>
-        </a> -->
-        <a href="https://api.whatsapp.com/send/?phone=%2B918925530313" target="_blank" class="icon whatsapp">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-    </div>
-    <!-- Social Media Icons End -->
-
     <!-- Banner Start -->
-    <section class="banner-bg banner-book">
+    <section id="book-form">
+        <div class="container align-items-center">
 
-        <!-- Neural Nerve Background -->
-        <div class="neural-bg">
-            <svg class="neural-nerves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="none" stroke="#5bd3c7" stroke-width="4"
-                    d="M0,100 C150,200 300,0 450,150 C600,300 750,50 900,200 C1050,350 1200,100 1350,250" />
-                <path fill="none" stroke="#5bd3c7" stroke-width="2"
-                    d="M0,150 C100,100 200,200 300,100 C400,0 500,300 600,150 C700,0 800,250 900,50 C1000,-50 1100,300 1200,200 C1300,100 1400,50 1500,100" />
-            </svg>
+            <!-- Neural Nerve Background -->
+            <div class="neural-bg">
+                <svg class="neural-nerves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="none" stroke="#5bd3c7" stroke-width="4"
+                        d="M0,100 C150,200 300,0 450,150 C600,300 750,50 900,200 C1050,350 1200,100 1350,250" />
+                    <path fill="none" stroke="#5bd3c7" stroke-width="2"
+                        d="M0,150 C100,100 200,200 300,100 C400,0 500,300 600,150 C700,0 800,250 900,50 C1000,-50 1100,300 1200,200 C1300,100 1400,50 1500,100" />
+                </svg>
+            </div>
+
+            <div class="row align-items-center mt-3">
+                <div class="col-lg-6">
+                    <div class="text-start">
+                        <h1 id="typing-book"></h1>
+                    </div>
+                </div>
+                <div class="col-lg-6 py-3">
+                    <div class="ticket-form p-4 mt-5">
+                        <h2 class="text-dark text-uppercase text-center">book now!</h2>
+                        <form>
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <input type="text" class="form-control py-2" id="name" placeholder="Your Name">
+                                </div>
+                                <div class="col-12 col-xl-6">
+                                    <input type="email" class="form-control py-2" id="email" placeholder="Your Email">
+                                </div>
+                                <div class="col-12 col-xl-6">
+                                    <input type="phone" class="form-control py-2" id="phone" placeholder="Phone">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control py-2" id="number" placeholder="State">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control py-2" id="number" placeholder="City">
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-select py-2" aria-label="Default select example">
+                                        <option selected>Lab Name</option>
+                                        <option value="1">Family Packages</option>
+                                        <option value="2">Basic Packages</option>
+                                        <option value="3">Premium Packages</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-xl-6">
+                                    <input type="date" class="form-control py-2" id="number" placeholder="date">
+                                </div>
+                                <div class="col-12 col-xl-6">
+                                    <input class="form-control py-2" type="time">
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="button" class="btn btn-primary w-25">Submint</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Banner Section -->
-        <section class="banner container text-center">
-            <h1 id="typing-book"></h1>
-        </section>
-
     </section>
     <!-- Banner End -->
-
-    <!-- Form Start -->
-    <!-- Contact Section -->
-    <section id="book-appoint">
-        <div class="container">
-            <h2 class="text-center title">Book an Appointment</h2>
-
-            <div id="bookingForm">
-                <form id="bookingFormElement" class="col-lg-6">
-
-                    <label>Name <span>*</span></label>
-                    <input type="text" name="name" placeholder="Name" required>
-
-                    <label>Email <span>*</span></label>
-                    <input type="email" name="email" placeholder="Email" required>
-
-                    <label>Phone Number <span>*</span></label>
-                    <input type="tel" name="phone" placeholder="Phone Number" required>
-
-                    <label>Lab Name <span>*</span></label>
-                    <input type="text" name="labName" placeholder="Lab Name" required>
-
-                    <label>Timing <span>*</span></label>
-                    <input type="text" name="timing" placeholder="Timing" required>
-
-                    <label>City <span>*</span></label>
-                    <input type="text" name="city" placeholder="City" required>
-
-                    <label>State <span>*</span></label>
-                    <input type="text" name="state" placeholder="State" required>
-
-                    <div class="text-center mt-5 book-btn">
-                        <button type="submit">Submit</button>
-                    </div>
-
-                </form>
-
-            </div>
-        </div>
-    </section>
-    <!-- Form End -->
-
-    <!-- Footer Start -->
-    <footer>
-        <div class="container-fluid bg-dark text-light py-3" style="margin-top: -55px;">
-            <div class="container pt-3">
-                <div class="row g-5 pt-4">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="d-flex flex-column align-items-center text-center">
-                            <img class="w-25" src="./assets/images/ToothCureLogo 4.svg" alt="">
-                            <p class="text-light">“A Confident smile begins with ToothCure.”</p>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Popular Links</h3>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-light mb-2" href="#"><i
-                                    class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                            <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About
-                                Us</a>
-                            <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our
-                                Services</a>
-                            <a class="text-light mb-2" href="#"><i
-                                    class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                            <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact
-                                Us</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Get In Touch</h3>
-                        <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>ToothCure Block, M.A.M. Nagar,
-                            Trichy to Chennai Trunk Road, Siruganur, Trichy - 621105</p>
-                        <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info.toothcure@gmail.com
-                        </p>
-                        <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+91 8925530313</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Others</h3>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-light mb-2" href="#"><i
-                                    class="bi bi-arrow-right text-primary me-2"></i>Privacy Policy</a>
-                            <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Terms
-                                and Conditions</a>
-                            <a class="text-light mb-2" href="#"><i
-                                    class="bi bi-arrow-right text-primary me-2"></i>FAQ</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container mt-5 d-flex justify-content-between align-items-center">
-                <p>© ToothCure, All Right Reserved.</p>
-                <div class="social-foot">
-                    <h3 class="text-white mb-3">Follow Us</h3>
-                    <a class="me-2" href="https://api.whatsapp.com/send/?phone=%2B918925530313" target="_blank"><i
-                            class="fa-brands fa-whatsapp"></i></a>
-                    <!-- <a class="me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a> -->
-                    <a class="me-2" href="https://www.linkedin.com/company/toothcure/about/?viewAsMember=true"
-                        target="_blank"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="" href="https://www.instagram.com/tooth.cure" target="_blank"><i
-                            class="fab fa-instagram fw-normal"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg rounded back-to-top"><i class="fa-solid fa-arrow-up"></i></a>
@@ -285,7 +206,7 @@
         typeTextBook();
 
         // Appointment Page End
-        
+
     </script>
 
 </body>

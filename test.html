@@ -7,97 +7,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 
   <style>
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-
-    .swiper-container {
-      width: 100%;
-      height: calc(100% - 40px); /* Space for pagination */
-      margin-bottom: 40px;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .swiper-pagination {
-      position: relative;
-      margin-top: 10px;
-    }
+    .schedule-form-design {
+    border: 1px solid #eee5e5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #b6b6c1;
+    padding: 4%;
+    width: 68%;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+}
+.enquire-now {
+    color: black;
+}
+.enquire-form-control {
+    margin-left: 3%;
+    width: 90%;
+}
+.schedule-btn {
+    margin-left: 3%;
+    width: 90%;
+    color: white;
+    font-weight: bold;
+    background: #FFA416;
+    border-color: #FFA416;
+    border-radius: 5px;
+    padding: 2.5%;
+}
   </style>
+
 </head>
 
 <body>
 
-  <!-- Swiper -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="https://via.placeholder.com/300x200" alt="Slide 1"></div>
-      <div class="swiper-slide"><img src="https://via.placeholder.com/300x200" alt="Slide 2"></div>
-      <div class="swiper-slide"><img src="https://via.placeholder.com/300x200" alt="Slide 3"></div>
-      <div class="swiper-slide"><img src="https://via.placeholder.com/300x200" alt="Slide 4"></div>
-      <div class="swiper-slide"><img src="https://via.placeholder.com/300x200" alt="Slide 5"></div>
+  <div id="content" class="content">
+    <!--Start banner section -->
+    <div id="owl-demo" class="owl-carousel new-testimonial-items banner_margin owl-loaded owl-drag">
+
+
+      <div class="owl-stage-outer owl-height" style="height: 487px;">
+        <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all; width: 896px;">
+          <div class="owl-item active" style="width: 866px; margin-right: 30px;">
+            <div><img src="https://nizcare.com/website-new/images/corporate/corporate_banner.png" alt="mobile"
+                class="banner-height"></div>
+          </div>
+        </div>
+      </div>
+      <div class="owl-nav disabled">
+        <div class="owl-prev"><i class="fa fa-caret-left"
+            style="font-size:40px;position:absolute;top:40%;color: gray;opacity: 0.7;left:1%"></i></div>
+        <div class="owl-next"><i class="fa fa-caret-right"
+            style="font-size:40px;position:absolute;top:40%;color: gray;opacity: 0.7;right:1%"></i></div>
+      </div>
+      <div class="owl-dots disabled"></div>
     </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
+    <div class="col-lg-6 mobile-form-remove-margin" style="float: right;margin-top: -45%;z-index: 999;">
+      <div class="schedule-form-design">
+        <form method="POST" action="https://nizcare.com" accept-charset="UTF-8" class="m-t" id="schedule-demo"
+          role="form" novalidate="novalidate"><input name="_token" type="hidden"
+            value="aoyqWCIe9zuiaYpOCJaSUbj1eF3OvtzQoRmJHNmk">
+          <h2 class="enquire-now">SCHEDULE DEMO</h2>
+          <div class="row">
+            <label class="col-lg-12 control-label enquire-label">Full Name</label>
+            <input type="text" name="name" id="corporate_top_full_name"
+              class="col-lg-12 form-control enquire-form-control">
+          </div>
+          <br>
+          <div class="row">
+            <label class="col-lg-12 control-label enquire-label">Organization Name</label>
+            <input type="text" name="organization_name" id="corporate_top_organization_name"
+              class="col-lg-12 form-control enquire-form-control">
+          </div>
+          <br>
+          <div class="row">
+            <label class="col-lg-12 control-label enquire-label">Contact Number</label>
+            <input type="text" name="phone_no" id="corporate_top_phone_no"
+              class="col-lg-12 form-control enquire-form-control">
+          </div>
+          <br>
+          <div class="row">
+            <label class="col-lg-12 control-label enquire-label">Official Email Id</label>
+            <input type="text" name="email" id="corporate_top_email"
+              class="col-lg-12 form-control enquire-form-control">
+          </div>
+          <br>
+          <div class="row">
+            <label class="col-lg-12 control-label enquire-label">Employees Count</label>
+            <input type="text" name="organization_size" id="corporate_top_organization_size"
+              class="col-lg-12 form-control enquire-form-control">
+          </div>
+          <br>
+          <div class="row">
+            <label class="col-lg-12 control-label enquire-label">Interested In</label>
+            <input type="text" name="interest" id="corporate_top_city"
+              class="col-lg-12 form-control enquire-form-control">
+          </div>
+          <br>
+          <div class="row">
+            <button class="btn schedule-btn col-lg-12" id="corporate_top_submit">Schedule Demo</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
   </div>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    const swiper = new Swiper('.swiper-container', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-      },
-    });
-  </script>
 
 </body>
 
