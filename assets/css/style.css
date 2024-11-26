@@ -5,7 +5,9 @@
     transition: 0.3s ease !important;
 }
 
-/* body {} */
+body {
+    /* background-color: #EEF9FF; */
+}
 
 :root {
     --bg-color: #E4EDEC;
@@ -126,14 +128,17 @@ h6,
 #banner,
 #offer,
 #network {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 #who-we,
-#service,
 #book-appoint {
+    padding: 50px 0;
+    /* background-color: var(--light); */
+}
+
+#service{
     padding: 100px 0;
-    background-color: var(--light);
 }
 
 .title {
@@ -545,11 +550,20 @@ footer div {
     border-radius: 4px;
 }
 
+@media (max-width: 500px) {
+
+
+    .social-foot a {
+        padding: 4px 6px;
+    }
+}
+
+
 /* Footer End */
 
 /* Appointment Page */
 
-.banner-book{
+.banner-book {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -599,11 +613,12 @@ form {
     margin: 50px auto;
 }
 
-form label, form input {
+form label,
+form input {
     margin: 5px 0;
 }
 
-form label span{
+form label span {
     color: #ff0000;
 }
 
