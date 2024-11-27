@@ -58,7 +58,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About Us</a>
@@ -125,16 +125,20 @@
                                 </div>
                                 <div class="col-12">
                                     <label for="city" class="form-label">City</label>
-                                    <input type="text" class="form-control py-2" id="city"
-                                        placeholder="Enter your city">
+                                    <select class="form-select py-2" id="city-name" aria-label="city Name">
+                                        <option selected>Select your city</option>
+                                        <option value="1">Chennai</option>
+                                        <option value="2">Bangalore</option>
+                                        <option value="3">Hyderabad</option>
+                                    </select>
                                 </div>
                                 <div class="col-12">
                                     <label for="lab-name" class="form-label">Lab Name</label>
                                     <select class="form-select py-2" id="lab-name" aria-label="Lab Name">
-                                        <option selected>Select a package</option>
-                                        <option value="1">Family Packages</option>
-                                        <option value="2">Basic Packages</option>
-                                        <option value="3">Premium Packages</option>
+                                        <option selected>Select your nearest clinic</option>
+                                        <option value="1">32 Dental Care</option>
+                                        <option value="2">OrthoSquare Dental Care</option>
+                                        <option value="3">John Dental Care</option>
                                     </select>
                                 </div>
                                 <div class="col-12 col-xl-6">
