@@ -5,8 +5,6 @@
     transition: 0.3s ease !important;
 }
 
-/* body {} */
-
 :root {
     --bg-color: #E4EDEC;
     --secondary: #F57E57;
@@ -183,8 +181,6 @@ h6,
     color: var(--dark);
 }
 
-@media (max-width: 991.98px) {}
-
 @media (max-width: 769px) {
 
     .navbar-nav {
@@ -193,8 +189,6 @@ h6,
 }
 
 /* Navbar End */
-
-@media (max-width: 991.98px) {}
 
 /* Social Icons Start */
 

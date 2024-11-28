@@ -1,5 +1,4 @@
 // Index Page End
-
 document.addEventListener("DOMContentLoaded", () => {
 
   const textElement = document.getElementById("typing-text");
@@ -42,9 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
   typeText();
 
 
-  // Function to animate a counter
+  
   const animateCounter = (element, targetValue, duration) => {
-    const interval = 20; // Interval in ms
+    const interval = 20; 
     const increment = Math.ceil((targetValue / duration) * interval);
     let currentValue = 0;
 
@@ -63,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCounter();
   };
 
-  // Initialize the Intersection Observer
+  
   const counters = document.querySelectorAll("[data-counter]");
   const observer = new IntersectionObserver(
     (entries, observer) => {
@@ -73,34 +72,31 @@ document.addEventListener("DOMContentLoaded", () => {
           const targetValue = parseInt(counterElement.getAttribute("data-target"));
           const duration = parseInt(counterElement.getAttribute("data-duration"));
 
-          // Start the counter and unobserve the element
+          
           animateCounter(counterElement, targetValue, duration);
           observer.unobserve(counterElement);
         }
       });
     },
     {
-      threshold: 0.5, // Trigger when 50% of the element is visible
+      threshold: 0.5, 
     }
   );
 
-  // Observe each counter element
   counters.forEach((counter) => observer.observe(counter));
 
 });
-
 // Index Page End
 
 // jQuery Start
-
 (function ($) {
   "use strict";
 
   $(".service-carousel").owlCarousel({
     autoplay: true,
-    autoplayTimeout: 1000, // 2 seconds between autoplay transitions
-    autoplaySpeed: 500, // 0.5-second transition for autoplay
-    smartSpeed: 500, // 0.5-second transition for manual navigation
+    autoplayTimeout: 1000, 
+    autoplaySpeed: 500, 
+    smartSpeed: 500, 
     margin: 25,
     loop: true,
     center: true,
@@ -127,5 +123,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 })(jQuery);
-
 // jQuery End
