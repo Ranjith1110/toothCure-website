@@ -196,7 +196,7 @@
         function typeTextBook() {
             if (currentPartIndexBook < textPartsBook.length) {
                 const { text, color } = textPartsBook[currentPartIndexBook];
-                
+
                 let span = textElementBook.querySelector(`span[data-part="${currentPartIndexBook}"]`);
                 if (!span) {
                     span = document.createElement("span");
