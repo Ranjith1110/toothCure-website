@@ -41,9 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
   typeText();
 
 
-  
+
   const animateCounter = (element, targetValue, duration) => {
-    const interval = 20; 
+    const interval = 20;
     const increment = Math.ceil((targetValue / duration) * interval);
     let currentValue = 0;
 
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCounter();
   };
 
-  
+
   const counters = document.querySelectorAll("[data-counter]");
   const observer = new IntersectionObserver(
     (entries, observer) => {
@@ -72,14 +72,14 @@ document.addEventListener("DOMContentLoaded", () => {
           const targetValue = parseInt(counterElement.getAttribute("data-target"));
           const duration = parseInt(counterElement.getAttribute("data-duration"));
 
-          
+
           animateCounter(counterElement, targetValue, duration);
           observer.unobserve(counterElement);
         }
       });
     },
     {
-      threshold: 0.5, 
+      threshold: 0.5,
     }
   );
 
@@ -94,9 +94,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   $(".service-carousel").owlCarousel({
     autoplay: true,
-    autoplayTimeout: 1000, 
-    autoplaySpeed: 500, 
-    smartSpeed: 500, 
+    autoplayTimeout: 1000,
+    autoplaySpeed: 500,
+    smartSpeed: 500,
     margin: 25,
     loop: true,
     center: true,
